@@ -12,9 +12,10 @@ extra_output = ["metadata"]
 # Remappings for dependencies
 remappings = [
     "@openzeppelin/contracts/=lib/openzeppelin/contracts",
-    "@chainlink/contracts/=lib/chainlink/contracts",
-    # "@forge-std/=lib/forge-std/src",
+    "@chainlink/contracts/=lib/chainlink-minimal-contracts/contracts",
+    "forge-std/=lib/forge-std/src",
 ]
+
 
 # Fuzz configuration
 [fuzz]

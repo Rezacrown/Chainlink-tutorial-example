@@ -192,7 +192,7 @@ contract BasicPriceFeedTest is Test {
         vm.expectRevert();
         
         // Deploy contract dengan address yang tidak valid
-        BasicPriceFeed invalidPriceFeed = new BasicPriceFeed(address(0x123));
+        new BasicPriceFeed(address(0x123));
         
 
         // Fungsi yang memanggil price feed harus handle error dengan baik

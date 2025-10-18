@@ -3,6 +3,8 @@ pragma solidity ^0.8.13;
 
 // Import interfaces untuk Chainlink VRF V2 Plus
 import {VRFConsumerBaseV2Plus} from "@chainlink/contracts/src/v0.8/vrf/dev/VRFConsumerBaseV2Plus.sol";
+
+
 import {VRFV2PlusClient} from "@chainlink/contracts/src/v0.8/vrf/dev/libraries/VRFV2PlusClient.sol";
 
 /**
@@ -26,6 +28,9 @@ contract BasicVRF is VRFConsumerBaseV2Plus {
     uint256 public lastRequestId; // ID request terakhir
     uint256[] public lastRandomWords; // Array random words terakhir
     mapping(uint256 => bool) public requestFulfilled; // Track fulfilled requests
+
+
+    // =========== Core implementation function ===========
 
     /**
      * @dev Constructor untuk setup VRF configuration
@@ -68,6 +73,7 @@ contract BasicVRF is VRFConsumerBaseV2Plus {
         bytes memory extraArgs = VRFV2PlusClient._argsToBytes(
             VRFV2PlusClient.ExtraArgsV1({nativePayment: false})
         );
+
 
         // Membuat VRF request ke coordinator
         // Fungsi ini akan mengembalikan requestId dan request price
@@ -112,6 +118,9 @@ contract BasicVRF is VRFConsumerBaseV2Plus {
         // Emit event untuk notifikasi
         emit RandomWordsFulfilled(_requestId, _randomWords);
     }
+
+
+    // =========== Other Example function ===========
 
     /**
      * @dev Fungsi untuk mendapatkan random word tertentu dari hasil terakhir

@@ -2,6 +2,7 @@
 	path = lib/openzeppelin-contracts
 	url = https://github.com/OpenZeppelin/openzeppelin-contracts
 
-[submodule "lib/chainlink"]
+
+[submodule "lib/chainlink-minimal-contracts"]
 	path = lib/chainlink
 	url = https://github.com/Rezacrown/chainlink-minimal-contracts

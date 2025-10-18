@@ -45,11 +45,13 @@ contract BasicPriceFeed {
             ,
             /* uint80 roundID */ // ID round saat ini (tidak digunakan)
             int256 answer, // Harga dalam format dengan decimals
-            /*uint256 startedAt*/ /*uint256 updatedAt*/ /*uint80 answeredInRound*/ // ID round ketika answer diberikan (tidak digunakan)
+            // Timestamp mulai round (tidak digunakan)
             ,
             ,
 
-        ) = // Timestamp mulai round (tidak digunakan)
+        ) = /*uint256 startedAt*/
+            /*uint256 updatedAt*/
+            /*uint80 answeredInRound*/ // ID round ketika answer diberikan (tidak digunakan)
             // Timestamp update terakhir (tidak digunakan)
             priceFeed.latestRoundData();
 
